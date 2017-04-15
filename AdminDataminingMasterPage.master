@@ -1,0 +1,167 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminDataminingMasterPage.master.cs" Inherits="Admin_AdminDataminingMasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <title>M Bazaar</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" href="css/images/favicon.ico" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/prettyCheckboxes.css" type="text/css" media="all" />
+	<script src="js/jquery-1.7.min.js" type="text/javascript"></script>
+	<script src="js/jquery.jcarousel.js" type="text/javascript"></script>
+	<script src="js/prettyCheckboxes.js" type="text/javascript"></script>
+	<script src="js/DD_belatedPNG-min.js" type="text/javascript"></script>
+	<script src="js/functions.js" type="text/javascript"></script>
+    
+    <style type="text/css">
+        .auto-style2 {
+            background-color: #333399;
+            color: #000000;
+        }
+        .auto-style3 {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" >
+    
+        <div class="shell">
+        
+    
+        <asp:Panel ID="Panel1" runat="server" Height="117px" Width="100%" style="text-align: right; font-weight: 700; color: #000000" BackColor="#333399">
+           <h5> 
+               <asp:LinkButton ID="LinkButtonEditProfile" runat="server" CssClass="auto-style2" Visible="False">Edit Profile</asp:LinkButton>
+               <font size="3">&nbsp;&nbsp;&nbsp; Welcome&nbsp; </font><asp:Label ID="LabelUser" runat="server" Text="Guest" style="color: #000000; font-weight: 700; font-size: 12pt"></asp:Label>
+            &nbsp;
+            <asp:LinkButton ID="LinkButtonLogin" runat="server" style="color: #000000; font-weight: 700; font-size: 12pt" OnClick="LinkButtonLogin_Click">Login</asp:LinkButton>
+            &nbsp;
+            <%--<asp:LinkButton ID="LinkButtonRegister" runat="server" Font-Bold="True" Font-Size="Medium" ForeColor="Black" style="font-size: 12pt">Register</asp:LinkButton>--%></h5>
+           
+               
+               
+               <div style="text-align: left; font-size: 8pt;"> 
+               <asp:ImageButton ID="ImageButton1" runat="server" Height="43px" ImageUrl="~/css/images/logo.png" Width="258px" PostBackUrl="~/HomeDM.aspx" />
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+               <%--<asp:TextBox ID="TextBoxSearch" runat="server" Height="28px" Width="249px"></asp:TextBox>
+               <asp:Button ID="ButtonSearch" runat="server" Height="31px" Text="Search" Width="92px" BackColor="Yellow" Font-Bold="True" Font-Names="Arial Black" Font-Size="Medium" OnClick="ButtonSearch_Click" />
+               --%>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+                </asp:Panel>
+    
+
+    <!-- Navigation -->
+		<div id="navigation">
+			<ul>
+				<li><a title="Home" href="AdminHome.aspx">Home<span class="sep-right"></span></a></li>
+				<li>
+					<a title="Add New Category" href="AddCatg.aspx">Add Category<span class="sep-right"></span></a>
+                   <%-- <div class="dd">
+						<ul>
+							<li><a title="Nokia" href="Nokia.aspx"><span class="sep-left"></span>Nokia</a></li>
+							<li>
+								<a title="Samsung" href="Samsung.aspx"><span class="sep-left"></span>Samsung</a>
+								
+							</li>
+                            <li><a title="Iphone" href="Iphone.aspx"><span class="sep-left"></span>Iphone</a></li>
+                            <li><a title="Other" href="Other.aspx"><span class="sep-left"></span>Others</a></li>
+					</ul>
+                        </div>--%>
+				</li>
+				<li><a title="Add New SubCategory" href="AddSubCatg.aspx">Add SubCategory<span class="sep-right"></span></a>
+
+                   <%--  <div class="dd">
+						<ul>
+							<li><a title="Lenovo" href="#"><span class="sep-left"></span>Lenovo</a></li>
+							<li>
+								<a title="HCL" href="#"><span class="sep-left"></span>HCL</a>
+								
+							</li>
+                           
+					</ul>
+                         </div>--%>
+				</li>
+
+
+				
+				<li>
+					<a title="Add New Product" href="AddProduct.aspx">Add Product<span class="sep-right"></span></a>
+					<%--<div class="dd">
+						<ul>
+							<li><a title="Lenovo" href="#"><span class="sep-left"></span>Lenovo</a></li>
+							<li>
+								<a title="Dell" href="#"><span class="sep-left"></span>Dell</a>
+								
+								
+							</li>
+							<li><a title="HP" href="#"><span class="sep-left"></span>HP</a></li>							
+						</ul>
+					</div>--%>
+				</li>
+				<li><a title="Add New Admin" href="AddNewAdmin.aspx">Add New Admin<span class="sep-right"></span></a>
+
+                   <%-- <div class="dd">
+						<ul>
+							<li><a title="Secondary Storage Device" href="#"><span class="sep-left"></span>Secondary Storage Device</a></li>
+							<li>
+								<a title="Mouse" href="#"><span class="sep-left"></span>Mouse</a></li>
+								
+								
+													
+						</ul>
+					</div>--%>
+
+				<%--</li>
+				<li><a title="View DataBase" href="Telivisions.aspx">View DataBase</a></li>
+				<li></li>--%>				
+			</ul>
+			<div class="cl"></div>
+		</div>
+		<!-- END Navigation -->
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        <p>
+            <br />
+        </p>
+        
+    </asp:ContentPlaceHolder>	
+			<!-- Footer  -->
+			<div id="footer">
+				<div id="footer-top"></div>
+				<div id="footer-middle">
+					<div class="col styles">
+						<h3>Styles</h3>
+						<ul>
+							<li><a title="Mobile" href="#"><span class="bullet"></span>Mobile</a></li>
+							<li><a title="abstract" href="#"><span class="bullet"></span>Tablets</a></li>
+							<li><a title="retro" href="#"><span class="bullet"></span>Laptops</a></li>
+							<li><a title="hi tech" href="#"><span class="bullet"></span>Computer Accesories</a></li>
+							<li><a title="for children" href="#"><span class="bullet"></span>television</a></li>
+						</ul>
+					</div>
+					<div class="col info">
+						<h3>Information</h3>
+						<ul>
+							<li><a title="About M Bazaar" href="#"><span class="bullet"></span>About M Bazaar</a></li>
+							<li><a title="Privacy Policy" href="#"><span class="bullet"></span>Privacy Policy</a></li>
+							<li><a title="Terms &amp; Conditions" href="#"><span class="bullet"></span>Terms &amp; Conditions</a></li>
+							<li><a title="Contact Us" href="#"><span class="bullet"></span>Contact Us</a></li>
+							<li><a title="Site Map" href="#"><span class="bullet"></span>Site Map</a></li>												
+						</ul>
+					</div>
+					
+					<div class="cl"></div>
+				</div>
+				<div id="footer-bottom">
+					<p>© M Bazaar Design by Bhavya Arora</p>
+				</div>
+			</div>
+			<!-- END Footer -->
+            </div>
+    </form>
+</body>
+</html>
